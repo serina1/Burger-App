@@ -6,7 +6,7 @@ let connection = mysql.createConnection({
   port: 3306,
   user: "jbfsr2i4o1blxq2v",
   password: "thht32nzlec7ahqx",
-  database: "	o29f91zk9fqzrypf"
+  database: "o29f91zk9fqzrypf"
 });
 
 connection.connect(function(err) {
