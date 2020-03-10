@@ -1,0 +1,52 @@
+
+<div class="row">
+    <img src="images/burger-app.jpg" class="img-responsive center-block" alt="burger">
+</div>
+
+<div class="eaten-burger-row">
+    <div class="column">
+        <h4 class="text-center">Eat the burger </h4>
+    
+        <ul class="burger">
+            {{#each burgers}}
+            {{#unless devoured}}
+            <li>
+                {{burger_name}}
+                <button class="change-devour" data-id="{{id}}" data-newdevour="{{devoured}}">
+                    Devour it!
+                </button>
+            </li>
+            {{/unless}}
+            {{/each}}
+        </ul>
+    </div> 
+    <div class="column">
+        <h4 class="text-center">Devoured Burgers!</h4>
+    
+        <ul class="devoured">
+            {{#each burgers}}
+            {{#if devoured}}
+            <li>
+                {{this.burger_name}}
+            {{/if}}
+            {{/each}}
+        </ul>
+    </div>
+</div>
+
+<div class="row">
+    <h3>Add a Burger</h3>
+</div>
+
+<div class="row">
+    <form class="create-form">
+
+        <div class="form-group">
+            <label for="new_burger">Burger Name:</label>
+            <input type="text" id="newBurger" name="new_burger">
+        </div>
+
+        <button type="submit">Add Burger</button>
+    </form>
+</div>
+</div>
